@@ -1,10 +1,11 @@
 public class binarySearch {
     public static void main(String[] args) {
-        int arr[] = {1,2,3,4,5,77,88,99,210};
+        int arr[] = {1,2,3,4,5};
         //binary search only works on sorted data
         int low = 0; //pointing to the first element 
-        int high= arr.length;
+        int high= arr.length-1;
         int target = 4;
+        int i =0;
         while(low <= high){
             int middle = (low+high)/2;
             if(arr[middle]==target){
@@ -16,6 +17,8 @@ public class binarySearch {
             else{
                 high = middle - 1 ;
             }
+            i++;
         }
+        System.out.println(i);
     }
 }
